@@ -1,11 +1,14 @@
-// Reference equation:
-// N(1 - PP%) - PPfixed = TR
+// N = Target Revenue + PPfixed / yieldAfterPercentage
 
-let yieldAfterPercentage;
+let targetRevenueFromInput = document.querySelector("body > div:nth-child(2) > div > span.ui.small.input.item > input[type=\"number\"]");
 
-function findYieldAfterPercentage( percentageFee ) {
+targetRevenueFromInput.addEventListener("change", function () {
+  alert(`Grabbed a target revenue of $${targetRevenueFromInput.value}.`); // --> verified that value is properly grabbed from input.
+  // TODO: Finish full calculator function.
+});
+
+function findYieldAfterPercentage(percentageFee) {
+  let yieldAfterPercentage;
   percentageFee *= 0.01;
-  return Number( yieldAfterPercentage = ( 1 - percentageFee ).toFixed(2) );
+  return yieldAfterPercentage = Number(( 1 - percentageFee ).toFixed(2));
 }
-
-// TODO: Continue writing inital code for calculator function
