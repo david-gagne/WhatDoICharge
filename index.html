@@ -6,34 +6,56 @@
     <title>WhatDoICharge is a simple calculator to find what to charge before payment processing fees.</title>
     <meta name="description" content="WhatDoICharge is an online calculator that will help you figure out what price you need to charge before payment processing fees in order to earn the money you need.">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <body>
-    <div class="ui borderless menu">
-      <div class="header item">
-        <a href="#">
-          <img class="ui tiny circular image" src="images/WhatDoICharge-logo.png">
-        </a>
-        <a class="item">How To Use</a>
-        <a class="item">About</a>
+    <div class="ui stackable menu">
+      <div class="item borderless">
+        <img class="ui small image" src="images/WhatDoICharge-logo.png">
       </div>
       <div class="right menu">
-        <a class="active item">
-          Paypal
-        </a>
-        <a class="item">
-          Square
-        </a>
-        <a class="item">
-          Stripe
-        </a>
+        <a class="item">How To Use</a>
+        <a class="item">About</a>
+        <a class="item">Contact</a>
       </div>
     </div>
+
+    <div class="ui container center aligned">
+      <div class="ui compact stackable menu">
+        <div class="ui pointing dropdown link item">
+          <span style="margin-right: 4px;">If you use</span>
+          <span class="default text">this payment processor</span>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <p class="item">Paypal</p>
+            <p class="item">Square</p>
+            <p class="item">Stripe</p>
+          </div>
+        </div>
+        <span class="ui small input item">
+          <span style="margin-right: 10px;">And you want to earn exactly</span>
+          <input type="number" placeholder="this much money">
+        </span>
+        <span class="ui input item">
+          <span style="margin-right: 10px;">You'll need to charge</span>
+          <input type="text" placeholder="this price">
+        </span>
+      </div>
+    </div>
+
+
+
+
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- semantic-ui -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.js"></script>
+    <script type="text/javascript">
+      $('.ui.pointing.dropdown').dropdown();
+    </script>
   </body>
 </html>
