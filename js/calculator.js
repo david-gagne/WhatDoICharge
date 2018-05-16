@@ -9,7 +9,11 @@ function Processor(name, percentage, fixed) {
   this.name = name;
   this.percentage = Number(percentage);
   this.fixed = Number(fixed);
+  this.calculator = (targetRevenue) => {
+    console.log(`Hit the calculator method on the ${this.name} object`);
+  }
 }
+
 
 function selected(processor) {
   switch (processor.target.textContent) {
@@ -23,5 +27,7 @@ function selected(processor) {
     default:
   }
 }
+
+
 
 dropdownMenu.addEventListener('click', selected);
