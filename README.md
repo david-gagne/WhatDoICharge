@@ -1,6 +1,6 @@
 ![The logo for WhatDoICharge.com](images/WhatDoICharge-logo.png)
 
-**WhatDoICharge**.TK ☚ (Emphasis on the _tk_ domain extension. I don't own the .com, so I can't tell you what you'll find there.)
+**WhatToCharge**.TK ☚ (Emphasis on the _tk_ domain extension. I don't own the .com, so I can't tell you what you'll find there.)
 
 A calculator to help you find out what price you'd need to charge _before_ online payment processing fees in order to earn the money you want for your product or service.
 
@@ -19,6 +19,6 @@ So Felipe wants to know...
 _"How much do I need to charge in order to make my fee of $1000?_
 
 
-**Questions like Felipe's are why I created WhatDoICharge**.TK ☚ (Again, emphasis on the .TK bit), a simple calculator to help you figure out what to charge before payment processing fees. 
+**Questions like Felipe's are why I created WhatToCharge**.TK ☚ (Again, emphasis on the .TK bit), a simple calculator to help you figure out what to charge before payment processing fees.
 
 Felipe would have to charge $1,030.18 in order to make $1000 using Stripe, by the way.
