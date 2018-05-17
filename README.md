@@ -1,4 +1,4 @@
-![The logo for WhatDoICharge.com](images/WhatDoICharge-logo.png)
+![The logo for WhatDoICharge.com](images/WhatDoICharge-icon.png)
 
 **WhatToCharge**.TK ☚ (Emphasis on the _tk_ domain extension. I don't own the .com, so I can't tell you what you'll find there.)
 
