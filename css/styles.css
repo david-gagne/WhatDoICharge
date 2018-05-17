@@ -7,9 +7,9 @@ body > div.ui.stackable.menu {
   border-radius: 0;
 }
 
-body > div.ui.container.center.aligned > div.ui.compact.stackable.menu {
+/* body > div.ui.container.center.aligned > div.ui.compact.stackable.menu {
   width: 100%;
-}
+} */
 
 body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span:nth-child(3) {
   margin: 0 auto;
@@ -47,4 +47,10 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0;
+}
+
+@media (max-width: 765px) {
+  body > div.ui.container.center.aligned > table {
+    display: none;
+  }
 }
