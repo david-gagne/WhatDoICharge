@@ -56,8 +56,10 @@
 
       <div class="ui basic modal">
         <div class="ui container center aligned">
-          <h1>Target Revenue</h1>
-          <p style="line-height: 34px; font-size: 20px">This is the amount of money you need to make for your product or service<span><em> before </em></span>payment processors deduct their fees.</p>
+          <h1>Target Revenue =
+            <span style="line-height: 34px; font-size: 20px">The amount of money you need to make <span><em> before </em></span>payment processors deduct their fees.</span>
+          </h1>
+
         </div>
       </div>
 
@@ -166,13 +168,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.js"></script>
     <script type="text/javascript">
+
+      let targetRevenueQuestionMark = document.querySelector('body > div.ui.container.center.aligned > table > thead > tr > th:nth-child(1) > a > i');
+
       $('.ui.pointing.dropdown').dropdown();
 
       $('.message .close').on('click', function() {
         $(this).closest('.message').transition('fade');
       });
 
-      $('.ui.basic.modal').modal('show');
+      targetRevenueQuestionMark.addEventListener('click', () => {
+        $('.ui.basic.modal').modal('show');
+      });
 
 
     </script>
