@@ -11,6 +11,16 @@ body > div.ui.stackable.menu {
   width: 100%;
 } */
 
+body > div.ui.stackable.menu > div.right.menu > a:nth-child(1) {
+  color: #FFFCF9;
+}
+body > div.ui.stackable.menu > div.right.menu > a:nth-child(2) {
+  color: #FFFCF9;
+}
+body > div.ui.stackable.menu > div.right.menu > a:nth-child(3) {
+  color: #FFFCF9;
+}
+
 body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span:nth-child(3) {
   margin: 0 auto;
 }
