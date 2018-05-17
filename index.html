@@ -20,7 +20,6 @@
       <div class="right menu">
         <a class="item">How To Use</a>
         <a class="item">About</a>
-        <a class="item">Contact</a>
       </div>
     </div>
 
@@ -69,6 +68,32 @@
           <h3>1. Enter a number for a target revenue (That's the amount of money you want to make).</h3>
           <h3>2. Select the payment processor you'll use from the dropdown menu.</h3>
           <h3>3. Feast your eyes on the price you need to charge!</h3>
+        </div>
+      </div>
+
+      <div id="aboutButtonModal" class="ui basic modal">
+        <div class="ui container center aligned">
+          <h1>About WhatToCharge</h1>
+          <h3 style="line-height: 35px">
+            I made this little calculator to help people figure out how much they need to charge their customers to cover the fees deducted by payment processors. <br>
+            It's a static website built using Semantic UI for the page elements and views. I hope that it brings you many moments of mathematical elation. Figuring out the formula was certainly fun for me <i class="fas fa-smile"></i>.
+            <br><br>
+            If you like this, tell me so.<br>
+            <a href="https://twitter.com/buildpax" style="color: inherit">
+              @buildpax
+              <i class="fab fa-twitter"></i>
+            </a>
+            <br><br>
+            You can also fork
+            <br>
+            <a href="#" style="color: inherit">
+              <i class="fas fa-code-branch"></i>
+              or star
+              <i class="fas fa-star"></i>
+              this repo on
+              <i class="fab fa-github"></i>
+            </a>
+          </h3>
         </div>
       </div>
 
@@ -180,6 +205,7 @@
 
       let targetRevenueQuestionMark = document.querySelector('body > div.ui.container.center.aligned > table > thead > tr > th:nth-child(1) > a > i');
       let howToUseButton = document.querySelector('body > div.ui.stackable.menu > div.right.menu > a:nth-child(1)');
+      let aboutButton = document.querySelector('body > div.ui.stackable.menu > div.right.menu > a:nth-child(2)');
 
 
       $('.ui.pointing.dropdown').dropdown();
@@ -194,6 +220,10 @@
 
       howToUseButton.addEventListener('click', () => {
         $('#howToUseButtonModal').modal('show');
+      });
+
+      aboutButton.addEventListener('click', () => {
+        $('#aboutButtonModal').modal('show');
       });
 
 
