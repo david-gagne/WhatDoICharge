@@ -14,6 +14,32 @@ body > div.ui.container.center.aligned > div.ui.compact.stackable.menu {
 body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span:nth-child(3) {
   margin: 0 auto;
 }
+
+body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span.ui.small.input.item > input[type="number"]::-webkit-input-placeholder {
+
+}
+body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span.ui.small.input.item > input[type="number"]::-moz-placeholder {
+
+}
+body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span.ui.small.input.item > input[type="number"]:-ms-input-placeholder {
+
+}
+body > div.ui.container.center.aligned > div.ui.compact.stackable.menu > span.ui.small.input.item > input[type="number"]:-moz-placeholder {
+
+}
+
+tr {
+  text-align: center;
+}
+
+body > div.ui.container.center.aligned > table > thead > tr > th:nth-child(1) {
+  background-color: #06d6a0;
+}
+
+body > div.ui.container.center.aligned > table {
+  margin-bottom: 100px;
+}
+
 /* This hides those squirrelly little number spinners that are default on modern browser number input UI*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
