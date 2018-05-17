@@ -25,13 +25,17 @@ function Processor(name, percentage, fixed) {
       errorFlashMessage.classList.remove("hidden");
 
       closeFlashMessageIcon.addEventListener("click", () => {
-        errorFlashMessage.classList.toggle("hidden");
-        targetRevenueInputElement.classList.toggle("error");
+        errorFlashMessage.classList.remove("hidden");
+        targetRevenueInputElement.classList.remove("error");
+      });
+
+      targetRevenueInput.addEventListener("click", () => {
+        errorFlashMessage.classList.add("hidden");
+        targetRevenueInputElement.classList.remove("error");
       });
     }
   }
 }
-
 
 function selected(processor) {
   switch (processor.target.textContent) {
