@@ -54,12 +54,21 @@
         </span>
       </div>
 
+      <div class="ui basic modal">
+        <div class="ui container center aligned">
+          <h1>Target Revenue</h1>
+          <p style="line-height: 34px; font-size: 20px">This is the amount of money you need to make for your product or service<span><em> before </em></span>payment processors deduct their fees.</p>
+        </div>
+      </div>
+
       <table class="ui celled table">
         <thead>
           <tr>
             <th style="font-size: large; color: #FFFCF9; background-color: #ef476f">
               Target Revenue
-              <i class="fas fa-question-circle"></i>
+              <a style="color: inherit" href="#">
+                <i class="fas fa-question-circle"></i>
+              </a>
             </th>
             <th>
               <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal Logo">
@@ -162,6 +171,10 @@
       $('.message .close').on('click', function() {
         $(this).closest('.message').transition('fade');
       });
+
+      $('.ui.basic.modal').modal('show');
+
+
     </script>
     <script src="js/calculator.js"></script>
   </body>
