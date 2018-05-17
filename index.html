@@ -55,12 +55,20 @@
         </span>
       </div>
 
-      <div class="ui basic modal">
+      <div id="targetRevenueQuestionMarkModal" class="ui basic modal">
         <div class="ui container center aligned">
           <h1>Target Revenue =
             <span style="line-height: 34px; font-size: 20px">The amount of money you want to make <span><em> after </em></span>payment processors deduct their fees.</span>
           </h1>
+        </div>
+      </div>
 
+      <div id="howToUseButtonModal" class="ui basic modal">
+        <div class="ui container center aligned">
+          <h1>How To Use</h1>
+          <h3>1. Enter a number for a target revenue (That's the amount of money you want to make).</h3>
+          <h3>2. Select the payment processor you'll use from the dropdown menu.</h3>
+          <h3>3. Feast your eyes on the price you need to charge!</h3>
         </div>
       </div>
 
@@ -171,6 +179,8 @@
     <script type="text/javascript">
 
       let targetRevenueQuestionMark = document.querySelector('body > div.ui.container.center.aligned > table > thead > tr > th:nth-child(1) > a > i');
+      let howToUseButton = document.querySelector('body > div.ui.stackable.menu > div.right.menu > a:nth-child(1)');
+
 
       $('.ui.pointing.dropdown').dropdown();
 
@@ -179,8 +189,14 @@
       });
 
       targetRevenueQuestionMark.addEventListener('click', () => {
-        $('.ui.basic.modal').modal('show');
+        $('#targetRevenueQuestionMarkModal').modal('show');
       });
+
+      howToUseButton.addEventListener('click', () => {
+        $('#howToUseButtonModal').modal('show');
+      });
+
+
 
 
     </script>
