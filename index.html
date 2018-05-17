@@ -22,6 +22,15 @@
     </div>
 
     <div class="ui container center aligned">
+
+      <div class="ui negative message hidden">
+        <i class="close icon"></i>
+        <div class="header">
+          <i class="fas fa-frown"></i> Error: You've entered an unbelievably small number.
+        </div>
+        <p>Please enter a larger target revenue number. I hear $9.99 is in vogue this time of year.</p>
+      </div>
+
       <div class="ui compact stackable menu">
         <span class="ui small input item">
           <span style="margin-right: 10px">If you want to earn exactly</span>
@@ -45,8 +54,13 @@
     </div>
     <br>
     <div class="ui container center aligned">
-      <h4>Supported currencies:</h4>
-      🇺🇸 U.S. Dollar
+      <h4>
+        Supported currencies
+        <a href="#" style="color: inherit">
+          <i class="fas fa-question-circle" style="margin-left: 2px"></i>
+        </a>
+      </h4>
+      <p>🇺🇸 U.S. Dollar</p>
     </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -55,6 +69,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.js"></script>
     <script type="text/javascript">
       $('.ui.pointing.dropdown').dropdown();
+
+      $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade');
+      });
     </script>
     <script src="js/calculator.js"></script>
   </body>

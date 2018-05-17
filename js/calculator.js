@@ -1,7 +1,10 @@
-let dropdownMenu = document.querySelector('body > div:nth-child(2) > div > div');
-let selectedDropdownMenuItem = document.querySelector('body > div:nth-child(2) > div > div > span.text');
+let dropdownMenu = document.querySelector('div.ui.pointing.dropdown.link.item');
+let selectedDropdownMenuItem = document.querySelector('span.default.text');
 let targetRevenueInput = document.querySelector('body > div:nth-child(2) > div > span.ui.small.input.item > input[type="number"]');
+let targetRevenueInputElement = document.querySelector('body > div:nth-child(2) > div > span.ui.small.input.item');
 let resultInput = document.querySelector('body > div:nth-child(2) > div > span:nth-child(3) > input[type="text"]');
+let errorFlashMessage = document.querySelector('body > div:nth-child(2) > div.ui.negative.message.hidden');
+let closeFlashMessageIcon = document.querySelector('body > div:nth-child(2) > div.ui.negative.message > i');
 let paypal = new Processor('PayPal', .971, .30);
 let stripe = new Processor('Stripe', .971, .30);
 let square = new Processor('Square', .965, .15);
@@ -12,15 +15,20 @@ function Processor(name, percentage, fixed) {
   this.fixed = Number(fixed);
   this.calculator = (targetRevenue) => {
     let price;
-    // console.log(`Hit the calculator method on the ${this.name} object`);
     targetRevenue = Number(targetRevenueInput.value);
-    // console.log(`You want to earn ${targetRevenue}, right?`);
-    // N = (TR + PPfixed) / (1 - PP%)
-    price = (targetRevenue + this.fixed) / this.yield;
-    price = price.toFixed(2);
-    // console.log(price);
-    resultInput.value = price;
+    if (targetRevenue > 0.01 || targetRevenue === "") {
+      price = (targetRevenue + this.fixed) / this.yield;
+      price = price.toFixed(2);
+      resultInput.value = price;
+    } else {
+      targetRevenueInputElement.classList.add("error");
+      errorFlashMessage.classList.remove("hidden");
 
+      closeFlashMessageIcon.addEventListener("click", () => {
+        errorFlashMessage.classList.toggle("hidden");
+        targetRevenueInputElement.classList.toggle("error");
+      });
+    }
   }
 }
 
@@ -28,15 +36,12 @@ function Processor(name, percentage, fixed) {
 function selected(processor) {
   switch (processor.target.textContent) {
     case "PayPal":
-      // console.log(`This processor deducts 2.9% + 30¢`);
       paypal.calculator();
       break;
     case "Stripe":
-      // console.log(`This processor deducts 2.9% + 30¢`);
       stripe.calculator();
       break;
     case "Square":
-      // console.log(`This processor deducts 3.5% + 15¢`);
       square.calculator();
       break;
     default:
