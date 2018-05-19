@@ -1,4 +1,4 @@
-![The logo for WhatDoICharge.com](images/WhatDoICharge-icon.png)
+![The logo for WhatDoICharge.com](images/WhatToCharge-icon.png)
 
 **WhatToCharge**
 
@@ -9,7 +9,7 @@ A calculator to help you find out what price you'd need to charge _before_ onlin
 
 Meet Felipe Vargas, a freelance writer from New York City.
 
-![Cartoon graphic of Felipe Vargas persona, a bearded man with brown hair sitting a desk with a laptop, coffee, and plant.](images/WhatDoICharge-image-of-felipe.svg)
+![Cartoon graphic of Felipe Vargas persona, a bearded man with brown hair sitting a desk with a laptop, coffee, and plant.](images/WhatToCharge-image-of-felipe.svg)
 
 
 Felipe is setting up his business to accept payments online for the first time, and a friend suggested that Felipe use Stripe to process his client payments. And after a quick search, Felipe finds that Stripe will deduct 2.9% + 30¢ from every card payment made by his clients.
