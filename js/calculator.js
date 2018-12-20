@@ -16,7 +16,7 @@ function Processor(name, percentage, fixed) {
   this.calculator = (targetRevenue) => {
     let price;
     targetRevenue = Number(targetRevenueInput.value);
-    if (targetRevenue > 0.01 || targetRevenue === "") {
+    if (targetRevenue > 0.01) {
       price = (targetRevenue + this.fixed) / this.yield;
       price = price.toFixed(2);
       resultInput.value = price;
@@ -52,7 +52,5 @@ function selected(processor) {
     // Do nothing.
   }
 }
-
-
 
 dropdownMenu.addEventListener('click', selected);
